@@ -59,3 +59,12 @@ htpass() {
     fi
 }
 
+greplog() {
+    if [[ $# < 2 ]]; then
+        echo "Usage: getlog log_path match_word"
+    elif [[ ! -a $1 ]]; then
+        echo "File not exists: $1"
+    else
+        cat $1 | grep $2 | awk '{ printf "%-20s %-10s %-25s %s\n", $1, $3, substr($4, 2), $7 }'
+    fi
+}
