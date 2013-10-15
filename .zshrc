@@ -49,26 +49,7 @@ plugins=(git vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH
-
-htpass() {
-    if (( $# < 2 )) then
-        echo "Usage: htpass username password"
-    else
-        if which htpasswd &> /dev/null; then
-            htpasswd -nbs $1 $2
-        else
-            ruby -e "require 'digest/sha1'; require 'base64'; print '{SHA}' + Base64.encode64(Digest::SHA1.digest('$1'))"
-        fi
-    fi
-}
-
-greplog() {
-    if [[ $# < 2 ]]; then
-        echo "Usage: getlog log_path match_word"
-    elif [[ ! -a $1 ]]; then
-        echo "File not exists: $1"
-    else
-        cat $1 | grep $2 | awk '{ printf "%-20s %-10s %-25s %s\n", $1, $3, substr($4, 2), $7 }'
-    fi
-}
+for file in ~/.{zsh_function,zsh_export}; do
+    [ -r "$file" ] && source "$file"
+done
+unset file
