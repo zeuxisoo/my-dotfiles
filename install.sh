@@ -3,7 +3,7 @@
 ERROR_STATUS=0
 
 function link {
-    for dotfile in `ls -d .??* | grep -vE '.DS_Store'`; do
+    for dotfile in `ls -d .??* | grep -vE '.DS_Store|.git$'`; do
         echo "Link from $PWD/$dotfile"
         rm -rf $HOME/$dotfile
         ln -s $PWD/$dotfile $HOME/$dotfile
@@ -11,7 +11,7 @@ function link {
 }
 
 function unlink {
-    for dotfile in `ls -d .??* | grep -vE '.DS_Store'`; do
+    for dotfile in `ls -d .??* | grep -vE '.DS_Store|.git$'`; do
         echo "rm -rf $HOME/$dotfile"
         rm -rf $HOME/$dotfile
     done
