@@ -1,0 +1,17 @@
+# Caption line
+caption always "%{= R}[ %{=b b}%-w%{=rb db}%>%n %t%{-}%+w%{-b}%< %=%{R}][%{M}%D %M %d %{G}%c%{R}]"
+
+# Set the screen status bar
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+
+# Set default charset
+defencoding utf8
+
+# Dynamic title
+shelltitle '$ |bash'
+
+# Set xterm's title
+hardstatus string "screen: %t"
+
+# Close startup message
+startup_message off
