@@ -17,6 +17,18 @@ function unlink {
     done
 }
 
+function install_zsh_plugin {
+    # password generator
+    if [ -d ~/.oh-my-zsh/custom/plugins/password_generator ]; then
+        rm -rf ~/.oh-my-zsh/custom/plugins/password_generator
+    fi
+
+    mkdir -p ~/.oh-my-zsh/custom/plugins/password_generator
+    git clone git://github.com/Xiphe/Password-Generator-for-zsh.git ~/.oh-my-zsh/custom/plugins/password_generator
+
+    new_line
+}
+
 function usage {
     echo -e "Link all dotfiles"
     echo -e "Usage $0 COMMAND..."
@@ -34,12 +46,17 @@ function print {
     fi
 }
 
+function new_line {
+    echo ""
+}
+
 # Main Program
 COMMAND=${@:$OPTIND:1}
 
 case $COMMAND in
 
     link)
+        install_zsh_plugin
         link
     ;;
 
