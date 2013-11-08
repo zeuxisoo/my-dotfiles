@@ -5,3 +5,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH
 if which rbenv > /dev/null; then
     eval "$(rbenv init -)";
 fi
+
+# plenv
+if which plenv > /dev/null; then
+    eval "$(plenv init -)"
+fi
+
