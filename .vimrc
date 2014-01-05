@@ -72,11 +72,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 " cancel highlight keyword on search
 noremap ; :nohlsearch<CR>
 
-" identation tab and shift+tab in normal, visual mode
+" identation tab and shift+tab in normal, visual mode, insert mode
 nmap <TAB> v>
 nmap <S-TAB> v<
 vmap <TAB> >gv
 vmap <S-TAB> <gv
+imap <S-TAB> <Esc><<i
 
 " support ctrl+c and ctrl+v
 noremap <C-c> y
