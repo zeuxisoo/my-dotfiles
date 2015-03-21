@@ -27,6 +27,18 @@ function install_zsh_plugin {
     git clone git://github.com/Xiphe/Password-Generator-for-zsh.git ~/.oh-my-zsh/custom/plugins/password_generator
 
     new_line
+
+    # Fish-like autosuggestions
+    if [ -d ~/.oh-my-zsh/custom/plugins/autosuggestions ]; then
+        rm -rf ~/.oh-my-zsh/custom/plugins/autosuggestions
+    fi
+
+    mkdir -p ~/.oh-my-zsh/custom/plugins/autosuggestions
+    git clone git://github.com/tarruda/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/autosuggestions
+
+    bash ~/.oh-my-zsh/custom/plugins/autosuggestions/install
+
+    new_line
 }
 
 function usage {
