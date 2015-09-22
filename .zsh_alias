@@ -1,2 +1,5 @@
 # Password generator
 alias genpw="pw_gen"
+
+# VIM
+alias vim="/usr/local/Cellar/vim/7.4.488/bin/vim"

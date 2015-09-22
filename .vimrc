@@ -1,3 +1,20 @@
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'gmarik/vundle'
+Plugin 'tomasr/molokai'
+Plugin 'Yggdroot/indentLine' " If mac, need brew install vim with v7.4
+call vundle#end()
+filetype plugin indent on
+
+" Plugin - tomasr/molokai
+colorscheme molokai
+
+" Custom
 set tabstop=4                   " numbers of spaces of tab character
 set shiftwidth=4                " numbers of spaces to (auto)indent
 set softtabstop=4               " must same as shiftwidth
@@ -59,6 +76,9 @@ filetype plugin on              " enable filetype-specific plugins
 
 syntax on                       " syntax highlighing
 syntax enable                   " syntax highlighing
+
+" leader
+let mapleader=","
 
 " file encoding
 set encoding=utf-8

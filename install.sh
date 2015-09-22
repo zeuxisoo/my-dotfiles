@@ -39,6 +39,17 @@ function install_zsh_plugin {
     bash ~/.oh-my-zsh/custom/plugins/autosuggestions/install
 
     new_line
+
+    # Vim Vundle with vim >= 7.4
+    brew install vim
+
+    if [ -d ~/.vim/bundle/Vundle.vim]; then
+        rm -rf ~/.vim/bundle/Vundle.vim
+    fi
+
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+    new_line
 }
 
 function usage {

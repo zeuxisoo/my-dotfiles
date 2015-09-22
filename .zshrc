@@ -54,3 +54,17 @@ for file in ~/.{zsh_function,zsh_export,zsh_alias}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
+
+# Setup zsh-autosuggestions
+source /Users/zeuxis/.oh-my-zsh/custom/plugins/autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically
+zle-line-init() {
+    zle autosuggest-start
+}
+
+zle -N zle-line-init
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+bindkey '^T' autosuggest-toggle
