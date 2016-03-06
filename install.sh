@@ -36,8 +36,6 @@ function install_zsh_plugin {
     mkdir -p ~/.oh-my-zsh/custom/plugins/autosuggestions
     git clone git://github.com/tarruda/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/autosuggestions
 
-    bash ~/.oh-my-zsh/custom/plugins/autosuggestions/install
-
     new_line
 
     # Vim Vundle with vim >= 7.4
@@ -48,6 +46,11 @@ function install_zsh_plugin {
     fi
 
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+    new_line
+
+    # PHP
+    brew tap homebrew/php
 
     new_line
 }
