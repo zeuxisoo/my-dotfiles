@@ -11,5 +11,5 @@ if which plenv > /dev/null; then
     eval "$(plenv init -)"
 fi
 
-# php
-export PATH=$(brew --prefix homebrew/php/php55)/bin:$PATH
+# brew
+export PATH="/usr/local/sbin:$PATH"
