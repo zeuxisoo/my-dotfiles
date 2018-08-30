@@ -49,9 +49,6 @@ function install_zsh_plugin {
 
     new_line
 
-    # PHP
-    brew tap homebrew/php
-
     new_line
 }
 
