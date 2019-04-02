@@ -10,7 +10,9 @@ ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="duellj"
 # ZSH_THEME="fino-time"
 # ZSH_THEME="ys"
-ZSH_THEME="fox"
+# ZSH_THEME="fox"
+# ZSH_THEME="amuse"
+ZSH_THEME="avit"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
