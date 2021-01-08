@@ -27,7 +27,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 # Android SDK
-export ANDROID_SDK_ROOT="/Users/zeuxis/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 
 # poetry
