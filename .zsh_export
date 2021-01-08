@@ -23,6 +23,9 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Travis Gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
 # Android SDK
 export ANDROID_SDK_ROOT="/Users/zeuxis/Library/Android/sdk"
 export ANDROID_HOME=$ANDROID_SDK_ROOT
