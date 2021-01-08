@@ -23,6 +23,9 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
 # Travis Gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
