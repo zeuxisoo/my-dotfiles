@@ -2,7 +2,7 @@
 
 Checkout `dotfiles` to `~/.dotfiles` path
 
-	git clone git@github.com:zeuxisoo/undefined-dotfiles.git .dotfiles
+	git clone git@github.com:zeuxisoo/my-dotfiles.git .dotfiles
 
 Enter to `dotfiles` directory
 
