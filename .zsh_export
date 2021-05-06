@@ -38,3 +38,7 @@ export ANDROID_HOME=$ANDROID_SDK_ROOT
 
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# sqlite
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
