@@ -35,10 +35,16 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 # Android SDK
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_HOME=$ANDROID_SDK_ROOT
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # sqlite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# go
+export PATH=$PATH:/opt/golang/go/bin:$HOME/go/bin
 
