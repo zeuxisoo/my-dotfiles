@@ -18,13 +18,13 @@ function unlink {
 }
 
 function install_zsh_plugin {
-    # password generator
+    # Password generator
     if [ -d ~/.oh-my-zsh/custom/plugins/password_generator ]; then
         rm -rf ~/.oh-my-zsh/custom/plugins/password_generator
     fi
 
     mkdir -p ~/.oh-my-zsh/custom/plugins/password_generator
-    git clone git://github.com/Xiphe/Password-Generator-for-zsh.git ~/.oh-my-zsh/custom/plugins/password_generator
+    git clone https://github.com/Xiphe/Password-Generator-for-zsh.git ~/.oh-my-zsh/custom/plugins/password_generator
 
     new_line
 
@@ -34,7 +34,17 @@ function install_zsh_plugin {
     fi
 
     mkdir -p ~/.oh-my-zsh/custom/plugins/autosuggestions
-    git clone git://github.com/tarruda/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/autosuggestions
+    git clone https://github.com/tarruda/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/autosuggestions
+
+    new_line
+
+    # History editor
+    if [ -d ~/.oh-my-zsh/custom/plugins/zsh-hist ]; then
+        rm -rf ~/.oh-my-zsh/custom/plugins/zsh-hist
+    fi
+
+    mkdir -p ~/.oh-my-zsh/custom/plugins/zsh-hist
+    git clone https://github.com/marlonrichert/zsh-hist.git ~/.oh-my-zsh/custom/plugins/zsh-hist
 
     new_line
 
