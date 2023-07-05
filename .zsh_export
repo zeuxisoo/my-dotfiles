@@ -13,6 +13,7 @@ fi
 
 # brew
 export PATH="/usr/local/sbin:$PATH"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
