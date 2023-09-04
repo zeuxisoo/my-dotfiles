@@ -58,7 +58,10 @@ done
 unset file
 
 # Setup zsh-autosuggestions
-source ~/.oh-my-zsh/custom/plugins/autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/custom/plugins/autosuggestions/zsh-autosuggestions.zsh
+
+# Setup zsh-hist(ory)
+source $ZSH/custom/plugins/zsh-hist/zsh-hist.plugin.zsh
 
 # use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
 # zsh-autosuggestions is designed to be unobtrusive)
