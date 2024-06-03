@@ -24,7 +24,9 @@ set linespace=0                 " line space, only work in GUI
 
 set autoindent                  " auto indent
 set cindent                     " c / java indent style
+set cinkeys-=0#                 " disable trigger indent by key 0#
 set copyindent                  " copy the previous indentation on autoindenting
+set nosmartindent               " disable smart indent
 
 set smarttab                    " insert tabs on the start of a line according to
 set expandtab                   " tabs are converted to spaces, use only when required
