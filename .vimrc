@@ -139,3 +139,6 @@ if &term =~ "xterm.*" || &term =~ "screen*"
   cmap <f28> <nop>
   cmap <f29> <nop>
 endif
+
+" disable json hide quotes
+let g:vim_json_conceal=0
