@@ -29,7 +29,7 @@ brewup() {
         brew upgrade
 
         echo "#> Upgrading brew cask ..."
-        brew cask upgrade
+        brew upgrade --cask
 
         echo "#> Prune unused links and folders, and cleanup old brew files"
         brew prune

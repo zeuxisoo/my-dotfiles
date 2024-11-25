@@ -22,6 +22,7 @@ fi
 
 # brew
 export PATH="/usr/local/sbin:$PATH"
+export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # nvm
@@ -57,4 +58,3 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # go
 export PATH=$PATH:/opt/golang/go/bin:$HOME/go/bin
-
