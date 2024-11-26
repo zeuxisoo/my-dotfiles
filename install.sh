@@ -87,7 +87,6 @@ function new_line {
 COMMAND=${@:$OPTIND:1}
 
 case $COMMAND in
-
     link)
         install_zsh_plugin
         link
