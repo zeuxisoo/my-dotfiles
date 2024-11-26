@@ -1,0 +1,55 @@
+{
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+
+    "features": {
+        "copilot": false
+    },
+
+    "buffer_font_size": 15,
+    "buffer_font_family": "FantasqueSansM Nerd Font Mono",
+    "buffer_font_weight": 450,
+    "buffer_font_features": {
+        "calt": true,
+        "ss01": true,
+        "ss02": true,
+        "ss03": true,
+        "ss04": true,
+        "ss05": true,
+        "ss06": true,
+        "ss19": true,
+        "ss20": true,
+        "zero": true,
+        "onum": true
+    },
+
+    "theme": "Andromeda",
+
+    "scroll_beyond_last_line": "off",
+    "ensure_final_newline_on_save": true,
+    "format_on_save": "off",
+    "tab_size": 4,
+    "hard_tabs": false,
+    "remove_trailing_whitespace_on_save": true,
+    "show_whitespaces": "all",
+    "indent_guides": {
+        "enabled": true,
+        "line_width": 1,
+        "coloring": "indent_aware",
+        "background_coloring": "disabled"
+    },
+
+    "languages": {
+        "Make": {
+            "tab_size": 4,
+            "hard_tabs": true
+        }
+    },
+
+    "experimental.theme_overrides": {
+        "editor.indent_guide_active": "#FF0000",
+        "editor.indent_guide": "#FFFFFF"
+    }
+}

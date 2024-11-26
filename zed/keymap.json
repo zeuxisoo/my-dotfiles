@@ -1,0 +1,18 @@
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            // "shift shift": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            // "j k": ["workspace::SendKeystrokes", "escape"]
+            // "alt-up": "editor::MoveLineUp",
+            // "alt-down": "editor::MoveLineDown"
+            "cmd-k cmd-u": "editor::ConvertToUpperCase",
+            "cmd-k cmd-l": "editor::ConvertToLowerCase"
+        }
+    }
+]
