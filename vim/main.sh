@@ -1,8 +1,9 @@
 source $PWD/_utils/variables.sh
 source $PWD/_utils/functions.sh
-source $PWD/_utils/linker.sh
+source $PWD/_utils/linkers/dotfile.sh
 
-CURRENT_PATH=$CURRENT_PATH/vim
+# Set install directory path
+INSTALLER_PATH=$CURRENT_PATH/vim
 
 function install {
     link

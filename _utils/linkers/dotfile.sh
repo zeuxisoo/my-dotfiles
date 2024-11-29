@@ -1,5 +1,5 @@
 function link {
-    for dotfile_path in `ls -d $CURRENT_PATH/.??* | grep -vE '.DS_Store|.git$'`; do
+    for dotfile_path in `ls -d $INSTALLER_PATH/.??* | grep -vE '.DS_Store|.git$'`; do
         echo "Link from $dotfile_path"
 
         dotfile_name=$(basename $dotfile_path)
@@ -10,7 +10,7 @@ function link {
 }
 
 function unlink {
-    for dotfile_path in `ls -d $CURRENT_PATH/.??* | grep -vE '.DS_Store|.git$'`; do
+    for dotfile_path in `ls -d $INSTALLER_PATH/.??* | grep -vE '.DS_Store|.git$'`; do
         echo "Unlink from $dotfile_path"
 
         dotfile_name=$(basename $dotfile_path)
