@@ -1,69 +1,35 @@
 #!/usr/bin/env bash
 
+HOME_PATH=$HOME
+CURRENT_PATH=$PWD
+# CONFIG_DIRS=(git screen vim zed zsh)
+CONFIG_DIRS=(git screen vim)
+
 ERROR_STATUS=0
 
-function link {
-    for dotfile in `ls -d .??* | grep -vE '.DS_Store|.git$'`; do
-        echo "Link from $PWD/$dotfile"
-        rm -rf $HOME/$dotfile
-        ln -s $PWD/$dotfile $HOME/$dotfile
+function install {
+    for d in ${CONFIG_DIRS[*]}; do
+        config_path="$CURRENT_PATH/$d"
+        config_main="$config_path/main.sh"
+
+        echo "[Install] $d ..."
+        echo "> $config_main"
+        bash $config_main install
     done
 }
 
-function unlink {
-    for dotfile in `ls -d .??* | grep -vE '.DS_Store|.git$'`; do
-        echo "rm -rf $HOME/$dotfile"
-        rm -rf $HOME/$dotfile
+function uninstall {
+    for d in ${CONFIG_DIRS[*]}; do
+        config_path="$CURRENT_PATH/$d"
+        config_main="$config_path/main.sh"
+
+        echo "[Uninstall] $d ..."
+        bash $config_main uninstall
     done
-}
-
-function install_zsh_plugin {
-    # Password generator
-    if [ -d ~/.oh-my-zsh/custom/plugins/password_generator ]; then
-        rm -rf ~/.oh-my-zsh/custom/plugins/password_generator
-    fi
-
-    mkdir -p ~/.oh-my-zsh/custom/plugins/password_generator
-    git clone https://github.com/Xiphe/Password-Generator-for-zsh.git ~/.oh-my-zsh/custom/plugins/password_generator
-
-    new_line
-
-    # Fish-like autosuggestions
-    if [ -d ~/.oh-my-zsh/custom/plugins/autosuggestions ]; then
-        rm -rf ~/.oh-my-zsh/custom/plugins/autosuggestions
-    fi
-
-    mkdir -p ~/.oh-my-zsh/custom/plugins/autosuggestions
-    git clone https://github.com/tarruda/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/autosuggestions
-
-    new_line
-
-    # History editor
-    if [ -d ~/.oh-my-zsh/custom/plugins/zsh-hist ]; then
-        rm -rf ~/.oh-my-zsh/custom/plugins/zsh-hist
-    fi
-
-    mkdir -p ~/.oh-my-zsh/custom/plugins/zsh-hist
-    git clone https://github.com/marlonrichert/zsh-hist.git ~/.oh-my-zsh/custom/plugins/zsh-hist
-
-    new_line
-
-    # Vim Vundle with vim >= 7.4
-    brew install vim
-
-    if [ -d ~/.vim/bundle/Vundle.vim]; then
-        rm -rf ~/.vim/bundle/Vundle.vim
-    fi
-
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-    new_line
-
-    new_line
 }
 
 function usage {
-    echo -e "Link all dotfiles"
+    echo -e "Link dotfiles"
     echo -e "Usage $0 COMMAND..."
     echo -e "\nCommands:"
 
@@ -73,27 +39,16 @@ function usage {
     exit 1
 }
 
-function print {
-    if [[ $QUIET == 0 ]]; then
-        echo -ne "$1";
-    fi
-}
-
-function new_line {
-    echo ""
-}
-
 # Main Program
 COMMAND=${@:$OPTIND:1}
 
 case $COMMAND in
-    link)
-        install_zsh_plugin
-        link
+    install)
+        install
     ;;
 
-    unlink)
-        unlink
+    uninstall)
+        uninstall
     ;;
 
     *)
