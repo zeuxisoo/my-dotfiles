@@ -2,8 +2,7 @@
 
 HOME_PATH=$HOME
 CURRENT_PATH=$PWD
-# CONFIG_DIRS=(git screen vim zed zsh)
-CONFIG_DIRS=(git screen vim)
+CONFIG_DIRS=(git screen vim zed)
 
 ERROR_STATUS=0
 
