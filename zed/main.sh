@@ -1,6 +1,6 @@
 source $PWD/_utils/variables.sh
 source $PWD/_utils/functions.sh
-source $PWD/_utils/linkers/fileonly.sh
+source $PWD/_utils/linkers/filelist.sh
 
 # Set install directory path
 INSTALLER_PATH=$CURRENT_PATH/zed
