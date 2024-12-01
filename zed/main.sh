@@ -13,11 +13,11 @@ LINK_FILES=(
 )
 
 function install {
-    link $CONFIG_PATH ${LINK_FILES[@]}
+    link
 }
 
 function uninstall {
-    unlink $CONFIG_PATH ${LINK_FILES[@]}
+    unlink
 }
 
 source $PWD/_utils/commands.sh
