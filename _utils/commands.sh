@@ -11,7 +11,7 @@ case $COMMAND in
 
     *)
         if [[ COMMAND != "" ]]; then
-            print "[Utils]: unknown command > $COMMAND\n\n"
+            echo "[Utils]: unknown command > $COMMAND"
         fi
     ;;
 esac

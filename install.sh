@@ -32,8 +32,8 @@ function usage {
     echo -e "Usage $0 COMMAND..."
     echo -e "\nCommands:"
 
-    echo -e "\t link"
-    echo -e "\t unlink"
+    echo -e "\t install"
+    echo -e "\t uninstall"
 
     exit 1
 }
@@ -52,7 +52,7 @@ case $COMMAND in
 
     *)
         if [[ COMMAND != "" ]]; then
-            print "Error: unknown command > $COMMAND\n\n"
+            echo "Error: unknown command > $COMMAND"
             ERROR_STATUS=1
         fi
 
