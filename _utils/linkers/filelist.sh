@@ -19,4 +19,6 @@ function unlink {
 
         rm -rf $CONFIG_PATH/$link_file
     done
+
+    # file list do not need to remove config path because it just link needed files
 }
