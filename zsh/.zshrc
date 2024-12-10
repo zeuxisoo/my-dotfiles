@@ -1,5 +1,38 @@
-# Customize to your needs...
-for file in ~/.{zsh_function,zsh_export,zsh_alias}; do
-    [ -r "$file" ] && source "$file"
+# Const
+ZINIT_HOME="$HOME/.config/zinit"
+ZINIT_INSTALLED_PATH=(
+    "$(brew --prefix)/opt/zinit"
+    $ZINIT_HOME
+    "$HOME/.local/share/zinit"
+)
+
+# Zinit
+zinit_bootstrap_file=""
+for installed_path in ${ZINIT_INSTALLED_PATH[*]}; do
+    if [[ -f $installed_path/zinit.zsh ]]; then
+        zinit_bootstrap_file=$installed_path/zinit.zsh
+        break
+    fi
 done
-unset file
+
+if [[ -z $zinit_bootstrap_file ]]; then
+    echo "Please install zinit first, Cannot find in the following paths:\n"
+    for installed_path in ${ZINIT_INSTALLED_PATH[*]}; do
+        echo "- $installed_path"
+    done
+    exit 1
+fi
+
+typeset -A ZINIT=(
+    BIN_DIR  "$ZINIT_HOME/bin"
+    HOME_DIR "$ZINIT_HOME"
+    COMPINIT_OPTS -C
+)
+
+source $zinit_bootstrap_file
+
+# Customize to your needs...
+# for file in ~/.{zsh_function,zsh_export,zsh_alias}; do
+#     [ -r "$file" ] && source "$file"
+# done
+# unset file
