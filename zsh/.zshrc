@@ -1,4 +1,5 @@
 # Const
+ZSH_HOME="$HOME/.config/zsh"
 ZINIT_HOME="$HOME/.config/zinit"
 ZINIT_INSTALLED_PATH=(
     "$(brew --prefix)/opt/zinit"
@@ -9,7 +10,7 @@ ZINIT_INSTALLED_PATH=(
 # Zinit
 zinit_bootstrap_file=""
 for installed_path in ${ZINIT_INSTALLED_PATH[*]}; do
-    if [[ -f $installed_path/zinit.zsh ]]; then
+    if [[ -f "$installed_path/zinit.zsh" ]]; then
         zinit_bootstrap_file=$installed_path/zinit.zsh
         break
     fi
@@ -31,8 +32,10 @@ typeset -A ZINIT=(
 
 source $zinit_bootstrap_file
 
-# Customize to your needs...
-# for file in ~/.{zsh_function,zsh_export,zsh_alias}; do
-#     [ -r "$file" ] && source "$file"
-# done
-# unset file
+# Customize
+for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
+    if [[ -r "$file" ]]; then
+        source "$file"
+    fi
+done
+unset file
