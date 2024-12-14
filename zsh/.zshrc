@@ -36,6 +36,9 @@ source $zinit_bootstrap_file
 zinit ice wait lucid depth"1"
 zinit light zsh-users/zsh-autosuggestions
 
+zinit ice wait lucid depth"1"
+zinit light zsh-users/zsh-syntax-highlighting
+
 # Customize
 for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
     if [[ -r "$file" ]]; then
