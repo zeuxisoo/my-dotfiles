@@ -32,6 +32,10 @@ typeset -A ZINIT=(
 
 source $zinit_bootstrap_file
 
+# Plugin
+zinit ice wait lucid depth"1"
+zinit light zsh-users/zsh-autosuggestions
+
 # Customize
 for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
     if [[ -r "$file" ]]; then
