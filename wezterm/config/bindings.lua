@@ -69,10 +69,10 @@ local keys = {
     { mods = mod.SUPER_CTRL,  key = 'w',          action = act.CloseCurrentTab({ confirm = false }) },
 
     -- tabs: navigation
-    { mods = mod.SUPER,       key = '[',          action = act.ActivateTabRelative(-1) },
-    { mods = mod.SUPER,       key = ']',          action = act.ActivateTabRelative(1) },
-    { mods = mod.SUPER_SHIFT, key = '[',          action = act.MoveTabRelative(-1) },
-    { mods = mod.SUPER_SHIFT, key = ']',          action = act.MoveTabRelative(1) },
+    { mods = mod.SUPER_SHIFT, key = '[',          action = act.ActivateTabRelative(-1) },
+    { mods = mod.SUPER_SHIFT, key = ']',          action = act.ActivateTabRelative(1) },
+    { mods = mod.SUPER,       key = '[',          action = act.MoveTabRelative(-1) },
+    { mods = mod.SUPER,       key = ']',          action = act.MoveTabRelative(1) },
 
     -- tab: title
     { mods = mod.SUPER,       key = '0',          action = act.EmitEvent('tabs.manual-update-tab-title') },
