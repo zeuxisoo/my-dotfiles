@@ -34,10 +34,13 @@ source $zinit_bootstrap_file
 
 # Plugin
 zinit ice wait lucid depth"1"
-zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions # history
 
 zinit ice wait lucid depth"1"
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions # git i[tab], git init --[tab]
+
+zinit ice wait lucid depth"1"
+zinit light zsh-users/zsh-syntax-highlighting # keyword
 
 # Customize
 for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
