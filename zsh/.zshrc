@@ -34,13 +34,18 @@ source $zinit_bootstrap_file
 
 # Plugin
 zinit ice wait lucid depth"1"
-zinit light zsh-users/zsh-autosuggestions # history
+zinit light zsh-users/zsh-autosuggestions # suggest full history
 
 zinit ice wait lucid depth"1"
 zinit light zsh-users/zsh-completions # git i[tab], git init --[tab]
 
 zinit ice wait lucid depth"1"
-zinit light zsh-users/zsh-syntax-highlighting # keyword
+zinit light zsh-users/zsh-syntax-highlighting # highlighting keyword
+
+zinit ice wait lucid depth"1"
+zinit light zsh-users/zsh-history-substring-search # up/down search filtered history
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Customize
 for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
