@@ -47,6 +47,11 @@ zinit light zsh-users/zsh-history-substring-search # up/down search filtered his
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+zinit ice wait lucid depth"1"
+zinit light marlonrichert/zsh-hist # edit history
+
+# load Xiphe/Password-Generator-for-zsh
+
 # Customize
 for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
     if [[ -r "$file" ]]; then
