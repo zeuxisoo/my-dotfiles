@@ -50,7 +50,8 @@ bindkey '^[[B' history-substring-search-down
 zinit ice wait lucid depth"1"
 zinit light marlonrichert/zsh-hist # edit history
 
-# load Xiphe/Password-Generator-for-zsh
+autoload -Uz compinit # load pure compinit function with related functions
+compinit -C # fire compinit without already loaded
 
 # Customize
 for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
