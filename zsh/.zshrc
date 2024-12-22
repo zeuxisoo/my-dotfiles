@@ -1,4 +1,4 @@
-# Const
+# const
 ZSH_HOME="$HOME/.config/zsh"
 ZINIT_HOME="$HOME/.config/zinit"
 ZINIT_INSTALLED_PATH=(
@@ -7,7 +7,7 @@ ZINIT_INSTALLED_PATH=(
     "$HOME/.local/share/zinit"
 )
 
-# Zinit
+# zinit
 zinit_bootstrap_file=""
 for installed_path in ${ZINIT_INSTALLED_PATH[*]}; do
     if [[ -f "$installed_path/zinit.zsh" ]]; then
@@ -32,7 +32,7 @@ typeset -A ZINIT=(
 
 source $zinit_bootstrap_file
 
-# Plugin
+# zinit: plugin
 zinit ice wait lucid depth"1"
 zinit light zsh-users/zsh-autosuggestions # suggest full history
 
@@ -50,10 +50,22 @@ bindkey '^[[B' history-substring-search-down
 zinit ice wait lucid depth"1"
 zinit light marlonrichert/zsh-hist # edit history
 
-autoload -Uz compinit # load pure compinit function with related functions
-compinit -C # fire compinit without already loaded
+# zinit: snippet from `/lib`, `/plugins`
+zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::functions.zsh
+zinit snippet OMZL::history.zsh
 
-# Customize
+zinit snippet OMZP::command-not-found # suggest related packages
+zinit snippet OMZP::extract           # extract <filename>
+
+# zinit: init
+autoload -Uz compinit # load pure compinit function with related functions
+compinit -C           # fire compinit without already loaded
+
+zinit cdreplay -q # restore command completions `compdef`
+
+# customize
 for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
     if [[ -r "$file" ]]; then
         source "$file"
