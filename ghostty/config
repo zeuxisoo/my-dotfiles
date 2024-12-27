@@ -1,0 +1,22 @@
+background = 282c34
+foreground = ffffff
+
+# ghostty +list-fonts
+font-family = FiraCode Nerd Font Mono
+font-style = Med
+font-feature = -calt,-clig,-liga
+font-size = 13
+
+# ghostty +list-themes
+theme = light:catppuccin-latte,dark:catppuccin-mocha
+window-theme = dark
+
+cursor-style = block
+cursor-style-blink = true
+background-opacity = 0.98
+scrollback-limit = 8000
+copy-on-select = true
+
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true

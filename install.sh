@@ -2,9 +2,9 @@
 
 HOME_PATH=$HOME
 CURRENT_PATH=$PWD
-CONFIG_DIRS=(git screen vim wezterm zed)
+CONFIG_DIRS=(ghostty git screen vim wezterm zed)
 
-ERROR_STATUS=0
+error_status=0
 
 function install {
     for d in ${CONFIG_DIRS[*]}; do
@@ -53,11 +53,11 @@ case $COMMAND in
     *)
         if [[ COMMAND != "" ]]; then
             echo "Error: unknown command > $COMMAND"
-            ERROR_STATUS=1
+            error_status=1
         fi
 
         usage
     ;;
 esac
 
-exit $ERROR_STATUS
+exit $error_status
