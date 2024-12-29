@@ -38,7 +38,7 @@ function usage {
     exit 1
 }
 
-# Main Program
+# main Program
 COMMAND=${@:$OPTIND:1}
 
 case $COMMAND in

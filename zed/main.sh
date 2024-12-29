@@ -2,10 +2,10 @@ source $PWD/_utils/variables.sh
 source $PWD/_utils/functions.sh
 source $PWD/_utils/linkers/filelist.sh
 
-# Set install directory path
+# set install directory path
 INSTALLER_PATH=$CURRENT_PATH/zed
 
-# Set self linked directory path and files
+# set self linked directory path and files
 CONFIG_PATH=$HOME_PATH/.config/zed
 LINK_FILES=(
     "keymap.json"
