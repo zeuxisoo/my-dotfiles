@@ -10,11 +10,14 @@ CONFIG_PATH=$HOME_PATH/.config/vim
 
 function install {
     mkdir -p $CONFIG_PATH
+    git clone https://github.com/VundleVim/Vundle.vim.git $CONFIG_PATH/bundle/Vundle.vim
     link
+    vim +PluginInstall +qall
 }
 
 function uninstall {
     unlink
+    rm -rf $CONFIG_PATH/bundle/Vundle.vim
     rm -rf $CONFIG_PATH
 }
 
