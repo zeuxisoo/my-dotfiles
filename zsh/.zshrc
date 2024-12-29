@@ -72,3 +72,6 @@ for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
     fi
 done
 unset file
+
+# starship (path changed in .zsh_export)
+eval "$(starship init zsh)"

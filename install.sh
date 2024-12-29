@@ -2,7 +2,7 @@
 
 HOME_PATH=$HOME
 CURRENT_PATH=$PWD
-CONFIG_DIRS=(ghostty git screen vim wezterm zed)
+CONFIG_DIRS=(ghostty git screen starship vim wezterm zed)
 
 error_status=0
 
