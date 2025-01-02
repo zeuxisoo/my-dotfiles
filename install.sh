@@ -2,7 +2,7 @@
 
 HOME_PATH=$HOME
 CURRENT_PATH=$PWD
-CONFIG_DIRS=(ghostty git screen starship vim wezterm zed)
+CONFIG_DIRS=(ghostty git screen starship vim wezterm zed zsh)
 
 error_status=0
 
@@ -38,7 +38,7 @@ function usage {
     exit 1
 }
 
-# main Program
+# main program
 COMMAND=${@:$OPTIND:1}
 
 case $COMMAND in
