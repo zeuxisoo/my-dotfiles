@@ -50,6 +50,9 @@ bindkey '^[[B' history-substring-search-down
 zinit ice wait lucid depth"1"
 zinit light marlonrichert/zsh-hist # edit history
 
+zinit ice wait lucid depth"1"
+zinit light xiphe/password-generator-for-zsh # password generator
+
 # zinit: snippet from `/lib`, `/plugins`
 zinit snippet OMZL::completion.zsh
 zinit snippet OMZL::directories.zsh
