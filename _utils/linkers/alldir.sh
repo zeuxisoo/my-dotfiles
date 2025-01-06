@@ -6,6 +6,8 @@ function link {
 
     mkdir -p $CONFIG_PATH
 
+    shopt -s nullglob # disable error when no match dotfile exists
+
     for file_or_dir_path in `ls -d $INSTALLER_PATH/??* $INSTALLER_PATH/.??* | grep -vE '.DS_Store|README.md|main.sh$'`; do
         echo "Link from $file_or_dir_path"
 
@@ -21,6 +23,8 @@ function unlink {
         echo 'Please set the CONFIG_PATH variable first when using the `alldir` linker'
         exit 1
     fi
+
+    shopt -s nullglob # disable error when no match dotfile exists
 
     for file_or_dir_path in `ls -d $INSTALLER_PATH/??* $INSTALLER_PATH/.??* | grep -vE '.DS_Store|README.md|main.sh$'`; do
         echo "Unlink from $file_or_dir_path"
