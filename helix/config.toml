@@ -1,0 +1,33 @@
+theme = "catppuccin_custom"
+
+[editor]
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+true-color = true
+bufferline = "multiple"
+color-modes = true
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.lsp]
+display-messages = true
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1

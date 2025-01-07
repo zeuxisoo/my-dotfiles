@@ -2,7 +2,7 @@
 
 HOME_PATH=$HOME
 CURRENT_PATH=$PWD
-CONFIG_DIRS=(ghostty git screen starship vim wezterm zed zellij zsh)
+CONFIG_DIRS=(ghostty git helix screen starship vim wezterm zed zellij zsh)
 
 error_status=0
 
