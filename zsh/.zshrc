@@ -85,4 +85,6 @@ done
 unset file
 
 # starship (path changed in .zsh_export)
-eval "$(starship init zsh)"
+if cmd_exists "starship"; then
+    eval "$(starship init zsh)"
+fi
