@@ -10,7 +10,7 @@ htpass() {
     fi
 }
 
-greplog() {
+grep_log() {
     if [[ $# < 2 ]]; then
         echo "Usage: getlog log_path match_word"
     elif [[ ! -a $1 ]]; then
@@ -20,7 +20,7 @@ greplog() {
     fi
 }
 
-brewup() {
+brew_up() {
     if hash brew 2>/dev/null; then
         echo "#> Updating brew ..."
         brew update
@@ -38,7 +38,7 @@ brewup() {
 }
 
 # https://superuser.com/a/1154859
-video2gif() {
+video_to_gif() {
     ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
     ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
     rm "${1}.png"
