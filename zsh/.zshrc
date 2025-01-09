@@ -7,6 +7,14 @@ ZINIT_INSTALLED_PATH=(
     "$HOME/.local/share/zinit"
 )
 
+# customize: before
+for file in $ZSH_HOME/supports/before/{alias,export,function}.sh; do
+    if [[ -r "$file" ]]; then
+        source "$file"
+    fi
+done
+unset file
+
 # zinit
 zinit_bootstrap_file=""
 for installed_path in ${ZINIT_INSTALLED_PATH[*]}; do
@@ -68,8 +76,8 @@ compinit -C           # fire compinit without already loaded
 
 zinit cdreplay -q # restore command completions `compdef`
 
-# customize
-for file in $ZSH_HOME/supports/.{zsh_function,zsh_export,zsh_alias}; do
+# customize: after
+for file in $ZSH_HOME/supports/after/{alias,export,function}.sh; do
     if [[ -r "$file" ]]; then
         source "$file"
     fi
