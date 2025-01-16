@@ -77,7 +77,7 @@ compinit -C           # fire compinit without already loaded
 zinit cdreplay -q # restore command completions `compdef`
 
 # keybindings
-bindkey -e # active emacs mode `man zshzle`
+bindkey -e # emacs mode: `man zshzle`, key map: `bindkey -L`
 
 # customize: after
 for file in $ZSH_HOME/supports/after/{alias,export,function}.sh; do
