@@ -76,6 +76,9 @@ compinit -C           # fire compinit without already loaded
 
 zinit cdreplay -q # restore command completions `compdef`
 
+# keybindings
+bindkey -e # active emacs mode `man zshzle`
+
 # customize: after
 for file in $ZSH_HOME/supports/after/{alias,export,function}.sh; do
     if [[ -r "$file" ]]; then
