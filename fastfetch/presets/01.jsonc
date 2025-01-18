@@ -1,0 +1,174 @@
+// load width `fastfetch --load-config ~/.config/fastfetch/presets/01.jsonc`
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "padding": {
+            "top": 6,
+            "left": 1,
+            "right": 2
+        }
+    },
+    "display": {
+        "separator": "  "
+    },
+    "modules": [
+        {
+            "type": "title",
+            "format": "{#1}╭───────────── {#}{#green}{user-name}"
+        },
+
+        // Hardware
+        {
+            "type": "custom",
+            "format": "{#yellow}│ Hardware"
+        },
+        {
+            "type": "host",
+            "key": "│  󰟐 Host        ",
+            "keyColor": "blue",
+            "format": "{name} [{family}]"
+        },
+        {
+            "type": "display",
+            "key": "│   Display     ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "cpu",
+            "key": "│  󰻠 CPU         ",
+            "keyColor": "blue",
+            "format": "{name} ({cores-physical}) @ {freq-max}"
+        },
+        {
+            "type": "gpu",
+            "key": "│   GPU         ",
+            "keyColor": "blue",
+            "format": "{name} ({core-count}) @ {frequency} [{type}]"
+        },
+        {
+            "type": "memory",
+            "key": "│   Memory      ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "disk",
+            "key": "│  󰋊 Disk        ",
+            "keyColor": "blue",
+            "folders": "/",
+            "format": "{name:5} - {size-used} / {size-total} ({size-percentage}) [{filesystem}]"
+        },
+        {
+            "type": "swap",
+            "key": "│  󰓡 Swap        ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "{#1}│"
+        },
+
+        // System
+        {
+            "type": "custom",
+            "format": "{#yellow}│ System"
+        },
+        {
+            "type": "os",
+            "key": "│  󰀶 OS          ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "kernel",
+            "key": "│   Kernel      ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "uptime",
+            "key": "│  󱎫 Uptime      ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "packages",
+            "key": "│  󰏖 Package     ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "shell",
+            "key": "│   Shell       ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "format": "{#1}│"
+        },
+
+        // Environment
+        {
+            "type": "custom",
+            "format": "{#yellow}│ Environment"
+        },
+        {
+            "type": "wm",   // window manager
+            "key": "│  󱇜 WM          ",
+            "keyColor": "red"
+        },
+        {
+            "type": "wmtheme",
+            "key": "│  󰔎 WMTheme     ",
+            "keyColor": "red"
+        },
+        {
+            "type": "de",   // desktop environment
+            "key": "│  󰧨 DE          ",
+            "keyColor": "red"
+        },
+        {
+            "type": "font",
+            "key": "│   Font        ",
+            "keyColor": "red"
+        },
+        {
+            "type": "cursor",
+            "key": "│  󰳽 Cursor      ",
+            "keyColor": "red"
+        },
+        {
+            "type": "terminal",
+            "key": "│   Terminal    ",
+            "keyColor": "red"
+        },
+        {
+            "type": "terminalfont",
+            "key": "│  󰛖 TerminalFont",
+            "keyColor": "red"
+        },
+        {
+            "type": "editor",
+            "key": "│   Editor      ",
+            "keyColor": "red"
+        },
+        {
+            "type": "locale",
+            "key": "│   Locale      ",
+            "keyColor": "red"
+        },
+        {
+            "type": "custom",
+            "format": "{#1}│"
+        },
+
+        // Others
+        {
+            "type": "colors",
+            "key": "{#yellow}│",
+            "symbol": "diamond"
+        },
+
+        // Footer
+        {
+            "type": "datetime",
+            "key": " ",
+            "format": "{#1}╰───────────── {#green}{hour-pretty}:{minute-pretty}:{second-pretty}"
+        }
+    ]
+}
