@@ -75,6 +75,15 @@ M.push = function(bg, fg, attribute, text)
 end
 
 M.setup = function()
+    wezterm.on('tabs.toggle-tab-bar', function(window, _pane)
+        local effective_config = window:effective_config()
+
+        window:set_config_overrides({
+            enable_tab_bar = not effective_config.enable_tab_bar,
+            background = effective_config.background,
+        })
+    end)
+
     wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
         M.cells = {}
 

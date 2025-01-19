@@ -74,10 +74,6 @@ local keys = {
     { mods = mod.SUPER,       key = '[',          action = act.MoveTabRelative(-1) },
     { mods = mod.SUPER,       key = ']',          action = act.MoveTabRelative(1) },
 
-    -- tab: title
-    { mods = mod.SUPER,       key = '0',          action = act.EmitEvent('tabs.manual-update-tab-title') },
-    { mods = mod.SUPER_CTRL,  key = '0',          action = act.EmitEvent('tabs.reset-tab-title') },
-
     -- tab: hide tab-bar
     { mods = mod.SUPER,       key = '9',          action = act.EmitEvent('tabs.toggle-tab-bar'), },
 
