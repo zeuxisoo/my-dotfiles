@@ -75,6 +75,25 @@ M.push = function(bg, fg, attribute, text)
 end
 
 M.setup = function()
+    wezterm.on('tabs.manual-update-tab-title', function(window, pane)
+        window:perform_action(
+            wezterm.action.PromptInputLine({
+                description = wezterm.format({
+                    { Foreground = { Color = '#FFFFFF' } },
+                    { Attribute = { Intensity = 'Bold' } },
+                    { Text = 'Enter new name for tab' },
+                }),
+                action = wezterm.action_callback(function(_window, _pane, line)
+                    if line ~= nil then
+                        local tab = window:active_tab()
+                        tab:set_title(line)
+                    end
+                end),
+            }),
+            pane
+        )
+    end)
+
     wezterm.on('tabs.toggle-tab-bar', function(window, _pane)
         local effective_config = window:effective_config()
 
