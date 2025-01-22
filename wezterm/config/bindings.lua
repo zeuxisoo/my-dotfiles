@@ -76,6 +76,7 @@ local keys = {
 
     -- tab: change title
     { mods = mod.SUPER,       key = '0',          action = act.EmitEvent('tabs.manual-update-tab-title') },
+    { mods = mod.SUPER_SHIFT, key = ')',          action = act.EmitEvent('tabs.reset-tab-title') }, -- equals: `cmd+shift+0`
 
     -- tab: hide tab-bar
     { mods = mod.SUPER,       key = '9',          action = act.EmitEvent('tabs.toggle-tab-bar'), },

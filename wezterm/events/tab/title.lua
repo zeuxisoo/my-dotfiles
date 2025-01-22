@@ -16,6 +16,12 @@ local color_text_hover_fg = '#d7dbde'
 local color_unseen_output_fg = '#f2761d'
 
 --
+local function clean_process_name(proc)
+    local a = string.gsub(proc, '(.*[/\\])(.*)', '%2')
+    return a:gsub('%.exe$', '')
+end
+
+--
 local M = {}
 
 M.cells = {}
@@ -92,6 +98,17 @@ M.setup = function()
             }),
             pane
         )
+    end)
+
+    wezterm.on('tabs.reset-tab-title', function(window, _pane)
+        local tab = window:active_tab()
+
+        -- wezterm.log_info(tab:active_pane():get_foreground_process_name())
+        local active_pane = tab:active_pane()                                -- _pane
+        local foreground_process = active_pane:get_foreground_process_name() -- _pane:get_foreground_process_name()
+        local process_name = clean_process_name(foreground_process)
+
+        tab:set_title(process_name)
     end)
 
     wezterm.on('tabs.toggle-tab-bar', function(window, _pane)
