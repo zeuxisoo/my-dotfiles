@@ -4,3 +4,8 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+
+# fnm
+if cmd_exists "fnm"; then
+    eval "$(fnm env --use-on-cd --shell zsh)"
+fi
