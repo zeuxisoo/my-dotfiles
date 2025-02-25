@@ -12,4 +12,8 @@ local scheme = schemes['Catppuccin Mocha']
 -- end
 -- local scheme = schemes[scheme_for_appearance(wezterm.gui.get_appearance())]
 
+scheme.selection_fg = '#0088FF'
+scheme.selection_bg = scheme.brights[4] -- '#fffacd'
+
+wezterm.log_info(scheme)
 return scheme
