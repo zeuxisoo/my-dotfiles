@@ -25,7 +25,7 @@
         "onum": true
     },
 
-    "theme": "Andromeda",
+    "theme": "Ayu Dark",
 
     "scroll_beyond_last_line": "off",
     "ensure_final_newline_on_save": true,
