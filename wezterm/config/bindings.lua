@@ -29,9 +29,23 @@ local keys = {
     { mods = 'NONE',          key = 'F12',   action = act.ShowDebugOverlay },
     { mods = mod.SUPER,       key = 'Enter', action = act.ToggleFullScreen },
     { mods = mod.SUPER,       key = 'k',     action = act.ClearScrollback('ScrollbackAndViewport') },
-    { mods = mod.SUPER,       key = 'f',     action = act.Search({ CaseInSensitiveString = '' }) },
     { mods = mod.SUPER,       key = 'q',     action = act.QuitApplication },
     { mods = mod.SUPER_SHIFT, key = 'p',     action = act.ActivateCommandPalette }, -- same: F2
+    {
+        mods = mod.SUPER,
+        key = 'f',
+        action = wezterm.action_callback(function(window, pane)
+            window:perform_action(act.Search({ CaseInSensitiveString = '' }), pane)
+            window:perform_action(
+                act.Multiple({
+                    act.CopyMode('ClearPattern'),
+                    act.CopyMode('ClearSelectionMode'),
+                    act.CopyMode('MoveToScrollbackBottom')
+                }),
+                pane
+            )
+        end)
+    },
     {
         mods = mod.SUPER_CTRL,
         key = 'u',
