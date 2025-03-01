@@ -15,5 +15,4 @@ local scheme = schemes['Catppuccin Mocha']
 scheme.selection_fg = '#0088FF'
 scheme.selection_bg = scheme.brights[4] -- '#fffacd'
 
-wezterm.log_info(scheme)
 return scheme
