@@ -15,6 +15,11 @@ for file in $ZSH_HOME/supports/before/{alias,export,function}.sh; do
 done
 unset file
 
+# checker: command missing
+if ! cmd_exists "fzf"; then
+    echo "Missing command line tools: \`fzf\`"
+fi
+
 # zinit
 zinit_bootstrap_file=""
 for installed_path in ${ZINIT_INSTALLED_PATH[*]}; do
@@ -93,6 +98,7 @@ if cmd_exists "starship"; then
 fi
 
 # zoxide (path changed in .zsh_export)
+# zoxide query [-l,-s,-ls]
 # if install later, run `rm ~/.zcompdump*; compinit`
 if cmd_exists "zoxide"; then
     eval "$(zoxide init zsh)"
