@@ -46,6 +46,9 @@ typeset -A ZINIT=(
 source $zinit_bootstrap_file
 
 # zinit: plugin
+zinit ice wait lucid depth"1"
+zinit light Aloxaf/fzf-tab # z keyword[sapce][tab]
+
 zinit ice wait lucid depth"1" atload'_zsh_autosuggest_start' # ensure first prompt work
 zinit light zsh-users/zsh-autosuggestions # suggest full history
 
