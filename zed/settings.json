@@ -45,6 +45,10 @@
         "Make": {
             "tab_size": 4,
             "hard_tabs": true
+        },
+        "Go": {
+            "tab_size": 4,
+            "hard_tabs": true
         }
     },
 
