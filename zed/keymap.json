@@ -12,7 +12,8 @@
             // "alt-up": "editor::MoveLineUp",
             // "alt-down": "editor::MoveLineDown"
             "cmd-k cmd-u": "editor::ConvertToUpperCase",
-            "cmd-k cmd-l": "editor::ConvertToLowerCase"
+            "cmd-k cmd-l": "editor::ConvertToLowerCase",
+            "alt-shift-f": "editor::Format"
         }
     }
 ]
