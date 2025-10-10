@@ -54,7 +54,18 @@
         "V": {
             "tab_size": 4,
             "hard_tabs": true
+        },
+        "CSS": {
+            "language_servers": ["tailwindcss-language-server", "microsoft/vscode-html-languageservice"]
         }
+    },
+
+    "agent": {
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gemini-2.5-pro"
+        },
+        "model_parameters": []
     },
 
     "experimental.theme_overrides": {
