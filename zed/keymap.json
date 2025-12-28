@@ -13,6 +13,7 @@
             // "alt-down": "editor::MoveLineDown"
             "cmd-k cmd-u": "editor::ConvertToUpperCase",
             "cmd-k cmd-l": "editor::ConvertToLowerCase",
+            "cmd-k cmd-b": "workspace::ToggleLeftDock",
             "alt-shift-f": "editor::Format"
         }
     }
