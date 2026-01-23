@@ -15,7 +15,7 @@ $character"""
 add_newline = true
 
 # set default command timeout
-command_timeout = 600
+command_timeout = 650
 
 # theme
 # - https://github.com/catppuccin/starship
