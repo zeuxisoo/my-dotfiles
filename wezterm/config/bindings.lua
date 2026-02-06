@@ -159,7 +159,12 @@ local keys = {
     {
         mods = mod.SUPER,
         key = 'p',
-        action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }),
+        action = act.PaneSelect({ alphabet = '1234567890', mode = 'Activate' }),
+    },
+    {
+        mods = mod.SUPER_CTRL,
+        key = 'p',
+        action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' })
     },
 
     -- panes: scroll pane
