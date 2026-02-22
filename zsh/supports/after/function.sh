@@ -43,3 +43,16 @@ video_to_gif() {
     ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
     rm "${1}.png"
 }
+
+vscode_insiders_clean() {
+    rm -rf "$HOME/Library/Caches/com.microsoft.VSCodeInsiders"
+    rm -rf "$HOME/Library/Application Support/Code - Insiders/Cache"
+    rm -rf "$HOME/Library/Application Support/Code - Insiders/CachedData"
+    rm -rf "$HOME/Library/Application Support/Code - Insiders/CachedExtensionVSIXs"
+    rm -rf "$HOME/Library/Application Support/Code - Insiders/Service Worker/CacheStorage"
+    rm -rf "$HOME/Library/Application Support/Code - Insiders/User/workspaceStorage"
+    rm -rf "$HOME/Library/Application Support/Code - Insiders/User/globalStorage"
+    rm -rf "$HOME/Library/Application Support/Code - Insiders/User/History"
+
+    code-insiders "$@"
+}
