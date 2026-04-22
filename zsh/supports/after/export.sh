@@ -32,3 +32,13 @@ fi
 if cmd_exists "fnm"; then
     eval "$(fnm env --use-on-cd --shell zsh)"
 fi
+
+# go (gopls)
+if path_exists "$HOME/go/bin"; then
+    export PATH="$PATH:$HOME/go/bin"
+fi
+
+# lm studio cli (lms)
+if path_exists "$HOME/.lmstudio/bin"; then
+    export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
